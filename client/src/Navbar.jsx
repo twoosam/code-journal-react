@@ -1,7 +1,8 @@
-export default function Navbar() {
+export default function Navbar({ onClick }) {
   return (
     <div>
-      <div>Code Journal<button>Entries</button></div>
+      <div>Code Journal</div>
+      <button onClick={onClick}>Entries</button>
     </div>
-  )
+  );
 }
