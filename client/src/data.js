@@ -1,6 +1,6 @@
 /* exported data */
 
-let data = {
+export let data = {
   view: 'entry-form',
   entries: [],
   editing: null,
