@@ -1,7 +1,6 @@
 import Navbar from './Navbar.jsx';
 import EntryList from './EntryList.jsx';
 import EditEntry from './EditEntry.jsx';
-import './App.css';
 import { useState } from 'react';
 
 const data = {
@@ -18,14 +17,13 @@ const data = {
 };
 
 function App() {
-  const [entriesClicked, setEntriesClicked] = useState(true);
-  const [newEntryClicked, setNewEntryClicked] = useState(true);
+  const [view, setView] = useState('edit-entry');
 
   return (
     <div>
-      <Navbar onClick={() => setNewEntryClicked(!newEntryClicked)} />
-      <EntryList entriesClicked={entriesClicked} data={data.entries} />
-      <EditEntry newEntryClicked={newEntryClicked} />
+      <Navbar onClick={() => setView('entries')} />
+      { view ==='entries' && <EntryList onClick={() => setView('edit-entry')} data={data.entries} />}
+      { view ==='edit-entry' && <EditEntry /> }
     </div>
   );
 }

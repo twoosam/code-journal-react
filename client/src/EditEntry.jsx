@@ -1,8 +1,7 @@
-import './App.css';
 
-export default function EditEntry({ newEntryClicked }) {
+export default function EditEntry() {
   return (
-    <div className={newEntryClicked ? undefined : 'hidden'}>
+    <div>
       <h3>New Entry</h3>
       <img src="/images/placeholder-image-square.jpg" alt="placeholder" />
       <form>

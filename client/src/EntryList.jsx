@@ -1,8 +1,8 @@
-export default function Entries({ data, entriesClicked }) {
+export default function Entries({ data, onClick }) {
   return (
-    <div className={entriesClicked ? undefined : 'hidden'}>
+    <div>
       <h3>Entries</h3>
-      <button>NEW</button>
+      <button onClick={onClick}>NEW</button>
       <ul>
         {data.map((entry) => (
           <li>
